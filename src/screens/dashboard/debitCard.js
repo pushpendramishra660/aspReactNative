@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 import React from 'react';
-import {Text, View, StyleSheet, SafeAreaView, ScrollView} from 'react-native';
+import {Text, View, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,

@@ -14,9 +14,9 @@ const CardConatiner = ({
 }) => {
   console.log(navigation)
   return (
-    <ScrollView style={{overflow: 'visible'}}>
+    <ScrollView bounces= {false} style={{overflow: 'visible'}}>
       <View style={styles.container}>
-        <View style={{top: -hp('10%')}}>
+        <View style={{top: -hp('10%'),position:'relative'}}>
           <Components.Card />
         </View>
         <View style={{top: -hp('10%')}}>
@@ -53,6 +53,7 @@ const CardConatiner = ({
           />
         </View>
       </View>
+    
     </ScrollView>
   );
 };

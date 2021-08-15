@@ -4,6 +4,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Entypo from 'react-native-vector-icons/Entypo';
 
@@ -15,7 +16,7 @@ import CardNo from './cardNo';
 const Card = props => {
   return (
     <React.Fragment>
-      <View onTouchStart={(e) => {console.log('touchMove',e.nativeEvent)}} 
+      <TouchableOpacity onPress = {() => {console.log('ddd')}} 
         style={{
           position: 'absolute',
           top: -wp('9%'),
@@ -30,8 +31,8 @@ const Card = props => {
           zIndex:-10
         }}>
         <Entypo name="eye" size={30} color={Colors.malachite} />
-        <Text style={{color: Colors.malachite,marginLeft:wp('1%')}}>Hide card number</Text>
-      </View>
+        <Text onPress = {() => {console.log('clicked')}} style={{color: Colors.malachite,marginLeft:wp('1%'),zIndex:10}}>Hide card number</Text>
+      </TouchableOpacity>
    
       <View style={styles.container}>
         <View style={styles.innerContainer}>
@@ -50,16 +51,7 @@ const Card = props => {
           <FontAwesome name="cc-visa" size={30} color={Colors.white} />
         </View>
       </View>
-      <TouchableOpacity style={{
-          position: 'absolute',
-          top: -wp('9%'),
-          right: 0,
-          width:wp('30%'),
-          height:hp('3%'),
-          zIndex: 1,
-        }}
-        onPress = {() => alert('show')}
-        ></TouchableOpacity>
+   
     </React.Fragment>
   );
 };
